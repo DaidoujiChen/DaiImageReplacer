@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C03D84D1C15862500AB9B2F /* DaiFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C03D84C1C15862500AB9B2F /* DaiFileManager.swift */; };
+		1C0406591C153A0100C38021 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0406581C153A0100C38021 /* AppDelegate.swift */; };
+		1C04065B1C153A0100C38021 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C04065A1C153A0100C38021 /* ViewController.swift */; };
+		1C04065D1C153A0100C38021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C04065C1C153A0100C38021 /* Assets.xcassets */; };
+		1C0406601C153A0100C38021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C04065E1C153A0100C38021 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C03D84C1C15862500AB9B2F /* DaiFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaiFileManager.swift; sourceTree = "<group>"; };
+		1C0406551C153A0100C38021 /* DaiImageReplacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaiImageReplacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C0406581C153A0100C38021 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1C04065A1C153A0100C38021 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C04065C1C153A0100C38021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C04065F1C153A0100C38021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1C0406611C153A0100C38021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C0406521C153A0100C38021 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C03D84A1C15862500AB9B2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C03D84B1C15862500AB9B2F /* DaiFileManager */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C03D84B1C15862500AB9B2F /* DaiFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				1C03D84C1C15862500AB9B2F /* DaiFileManager.swift */,
+			);
+			path = DaiFileManager;
+			sourceTree = "<group>";
+		};
+		1C04064C1C153A0100C38021 = {
+			isa = PBXGroup;
+			children = (
+				1C0406571C153A0100C38021 /* DaiImageReplacer */,
+				1C0406561C153A0100C38021 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C0406561C153A0100C38021 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C0406551C153A0100C38021 /* DaiImageReplacer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C0406571C153A0100C38021 /* DaiImageReplacer */ = {
+			isa = PBXGroup;
+			children = (
+				1C03D84A1C15862500AB9B2F /* Model */,
+				1C0406581C153A0100C38021 /* AppDelegate.swift */,
+				1C04065A1C153A0100C38021 /* ViewController.swift */,
+				1C04065C1C153A0100C38021 /* Assets.xcassets */,
+				1C04065E1C153A0100C38021 /* Main.storyboard */,
+				1C0406611C153A0100C38021 /* Info.plist */,
+			);
+			path = DaiImageReplacer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C0406541C153A0100C38021 /* DaiImageReplacer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C0406641C153A0100C38021 /* Build configuration list for PBXNativeTarget "DaiImageReplacer" */;
+			buildPhases = (
+				1C0406511C153A0100C38021 /* Sources */,
+				1C0406521C153A0100C38021 /* Frameworks */,
+				1C0406531C153A0100C38021 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DaiImageReplacer;
+			productName = DaiImageReplacer;
+			productReference = 1C0406551C153A0100C38021 /* DaiImageReplacer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C04064D1C153A0100C38021 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = DaidoujiChen;
+				TargetAttributes = {
+					1C0406541C153A0100C38021 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 1C0406501C153A0100C38021 /* Build configuration list for PBXProject "DaiImageReplacer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1C04064C1C153A0100C38021;
+			productRefGroup = 1C0406561C153A0100C38021 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C0406541C153A0100C38021 /* DaiImageReplacer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C0406531C153A0100C38021 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C04065D1C153A0100C38021 /* Assets.xcassets in Resources */,
+				1C0406601C153A0100C38021 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C0406511C153A0100C38021 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C04065B1C153A0100C38021 /* ViewController.swift in Sources */,
+				1C0406591C153A0100C38021 /* AppDelegate.swift in Sources */,
+				1C03D84D1C15862500AB9B2F /* DaiFileManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1C04065E1C153A0100C38021 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C04065F1C153A0100C38021 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1C0406621C153A0100C38021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1C0406631C153A0100C38021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1C0406651C153A0100C38021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DaiImageReplacer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.daidouji.DaiImageReplacer;
+				PRODUCT_NAME = DaiImageReplacer;
+			};
+			name = Debug;
+		};
+		1C0406661C153A0100C38021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DaiImageReplacer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.daidouji.DaiImageReplacer;
+				PRODUCT_NAME = DaiImageReplacer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C0406501C153A0100C38021 /* Build configuration list for PBXProject "DaiImageReplacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C0406621C153A0100C38021 /* Debug */,
+				1C0406631C153A0100C38021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C0406641C153A0100C38021 /* Build configuration list for PBXNativeTarget "DaiImageReplacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C0406651C153A0100C38021 /* Debug */,
+				1C0406661C153A0100C38021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C04064D1C153A0100C38021 /* Project object */;
+}
