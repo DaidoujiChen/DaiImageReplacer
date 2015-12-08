@@ -679,7 +679,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="gWn-wF-vrr">
-                                            <rect key="frame" x="0.0" y="0.0" width="438" height="144"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="438" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -702,8 +702,12 @@
                                                             <rect key="frame" x="1" y="1" width="435" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ptp-I4-9uH">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Ptp-I4-9uH">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="434" height="17"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="17" id="6Zg-6d-LMs"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="430" id="jDU-y7-3ea"/>
+                                                                    </constraints>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="tHE-eX-cP8">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -711,6 +715,12 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Ptp-I4-9uH" firstAttribute="leading" secondItem="WL8-TA-ZBz" secondAttribute="leading" constant="2" id="Hr0-2k-MBu"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Ptp-I4-9uH" secondAttribute="trailing" constant="3" id="KOJ-gy-cAj"/>
+                                                                <constraint firstItem="Ptp-I4-9uH" firstAttribute="top" secondItem="WL8-TA-ZBz" secondAttribute="top" id="Kp2-9Q-xT1"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Ptp-I4-9uH" secondAttribute="bottom" id="bw6-MA-iKj"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="Ptp-I4-9uH" id="FZe-4F-1sE"/>
                                                             </connections>
@@ -718,6 +728,10 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="esg-G7-DcC"/>
+                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="sOu-bK-pJL"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -824,6 +838,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logsTableView" destination="gWn-wF-vrr" id="ZNl-r7-wgP"/>
                         <outlet property="sourcePathControl" destination="xLP-6j-vJw" id="LeF-nU-dmd"/>
                         <outlet property="targetPathControl" destination="F4j-Co-kla" id="ZHQ-pe-lRv"/>
                     </connections>
