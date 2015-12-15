@@ -12,6 +12,8 @@
 		1C04065B1C153A0100C38021 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C04065A1C153A0100C38021 /* ViewController.swift */; };
 		1C04065D1C153A0100C38021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C04065C1C153A0100C38021 /* Assets.xcassets */; };
 		1C0406601C153A0100C38021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C04065E1C153A0100C38021 /* Main.storyboard */; };
+		1C0AA9DA1C1ACA3D0041C15D /* GenerateOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0AA9D91C1ACA3D0041C15D /* GenerateOperation.swift */; };
+		1C0AA9DD1C1ACDEB0041C15D /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0AA9DC1C1ACDEB0041C15D /* Operator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		1C04065C1C153A0100C38021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C04065F1C153A0100C38021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C0406611C153A0100C38021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C0AA9D91C1ACA3D0041C15D /* GenerateOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateOperation.swift; sourceTree = "<group>"; };
+		1C0AA9DC1C1ACDEB0041C15D /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +42,9 @@
 		1C03D84A1C15862500AB9B2F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1C0AA9D81C1ACA3D0041C15D /* GenerateOperation */,
 				1C03D84B1C15862500AB9B2F /* DaiFileManager */,
+				1C0AA9DB1C1ACDD60041C15D /* Operator */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -78,6 +84,22 @@
 				1C0406611C153A0100C38021 /* Info.plist */,
 			);
 			path = DaiImageReplacer;
+			sourceTree = "<group>";
+		};
+		1C0AA9D81C1ACA3D0041C15D /* GenerateOperation */ = {
+			isa = PBXGroup;
+			children = (
+				1C0AA9D91C1ACA3D0041C15D /* GenerateOperation.swift */,
+			);
+			path = GenerateOperation;
+			sourceTree = "<group>";
+		};
+		1C0AA9DB1C1ACDD60041C15D /* Operator */ = {
+			isa = PBXGroup;
+			children = (
+				1C0AA9DC1C1ACDEB0041C15D /* Operator.swift */,
+			);
+			path = Operator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +174,8 @@
 			files = (
 				1C04065B1C153A0100C38021 /* ViewController.swift in Sources */,
 				1C0406591C153A0100C38021 /* AppDelegate.swift in Sources */,
+				1C0AA9DD1C1ACDEB0041C15D /* Operator.swift in Sources */,
+				1C0AA9DA1C1ACA3D0041C15D /* GenerateOperation.swift in Sources */,
 				1C03D84D1C15862500AB9B2F /* DaiFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

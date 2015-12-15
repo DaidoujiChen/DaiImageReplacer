@@ -8,12 +8,37 @@
 
 import Cocoa
 
-func +(left: String, right: Int) -> String {
-    return String(format: "%@%td", left, right)
+enum TableType: String {
+    case Source, Target
 }
 
-func +(left: Int, right: String) -> String {
-    return String(format: "%td%@", left, right)
+// MARK: GenerateOperationDelegate
+extension ViewController: GenerateOperationDelegate {
+    
+    func onFinish(result: [String: [DaiFileManagerPath]], forKey key: String, duration: NSTimeInterval) {
+        self.addLog(key + " cost : " + duration + " seconds")
+        switch key {
+        case TableType.Source.rawValue:
+            self.sourceTable = result
+        case TableType.Target.rawValue:
+            self.targetTable = result
+        default:
+            break
+        }
+
+        var namesTotalCount = 0
+        var pathsTotalCount = 0
+        for (name, paths) in result {
+            namesTotalCount++
+            pathsTotalCount += paths.count
+            if paths.count > 1 {
+                self.addLog("duplicate " + name + " " + paths.count + " times in " + key)
+            }
+        }
+        self.addLog("total " + key + " name count : " + namesTotalCount)
+        self.addLog("total " + key + " path count : " + pathsTotalCount)
+    }
+    
 }
 
 // MARK: IBAction
@@ -51,19 +76,9 @@ extension ViewController {
             }
             
             safeSelf.sourcePathControl.URL = panel.URL
-            safeSelf.generateFrom(DaiFileManager.custom(safeSelf.pathsFrom(safeURL)), toTable: &safeSelf.sourceTable)
-            
-            var namesTotalCount = 0
-            var pathsTotalCount = 0
-            for (name, paths) in safeSelf.sourceTable {
-                namesTotalCount++
-                pathsTotalCount += paths.count
-                if paths.count > 1 {
-                    safeSelf.addLog(name + " have : " + paths.count + " times in source")
-                }
-            }
-            safeSelf.addLog("total source name count : " + namesTotalCount)
-            safeSelf.addLog("total source path count : " + pathsTotalCount)
+            let newGenerateOperation = GenerateOperation(source: DaiFileManager.custom(safeSelf.pathsFrom(safeURL)), forKey: TableType.Source.rawValue)
+            newGenerateOperation.delegate = safeSelf
+            safeSelf.generateOperationQueue.addOperation(newGenerateOperation)
         }
     }
     
@@ -79,19 +94,9 @@ extension ViewController {
             }
             
             safeSelf.targetPathControl.URL = panel.URL
-            safeSelf.generateFrom(DaiFileManager.custom(safeSelf.pathsFrom(safeURL)), toTable: &safeSelf.targetTable)
-            
-            var namesTotalCount = 0
-            var pathsTotalCount = 0
-            for (name, paths) in safeSelf.targetTable {
-                namesTotalCount++
-                pathsTotalCount += paths.count
-                if paths.count > 1 {
-                    safeSelf.addLog(name + " have : " + paths.count + " times in target")
-                }
-            }
-            safeSelf.addLog("total target name count : " + namesTotalCount)
-            safeSelf.addLog("total target path count : " + pathsTotalCount)
+            let newGenerateOperation = GenerateOperation(source: DaiFileManager.custom(safeSelf.pathsFrom(safeURL)), forKey: TableType.Target.rawValue)
+            newGenerateOperation.delegate = safeSelf
+            safeSelf.generateOperationQueue.addOperation(newGenerateOperation)
         }
     }
     
@@ -168,32 +173,6 @@ extension ViewController {
         return paths
     }
     
-    // 允許的副檔名
-    private func isAllow(named: String) -> Bool {
-        let allows = ["png", "jpg", "jpeg"]
-        let split = named.componentsSeparatedByString(".")
-        return allows.contains(split.last ?? "")
-    }
-    
-    // 生成比對表
-    private func generateFrom(source: DaiFileManagerPath, inout toTable table: [String: [DaiFileManagerPath]]) {
-        for file in source.files.all() {
-            if self.isAllow(file) {
-                if var paths = table[file] {
-                    paths.append(source[file])
-                }
-                else {
-                    let newPath = [source[file]]
-                    table[file] = newPath
-                }
-            }
-        }
-        
-        for folder in source.folders.all() {
-            self.generateFrom(source[folder], toTable: &table)
-        }
-    }
-    
 }
 
 // MARK: ViewController
@@ -203,8 +182,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var sourcePathControl: NSPathControl!
     @IBOutlet weak var targetPathControl: NSPathControl!
     
-    var sourceTable = [String: [DaiFileManagerPath]]()
-    var targetTable = [String: [DaiFileManagerPath]]()
-    var logs = [String]()
+    private var sourceTable = [String: [DaiFileManagerPath]]()
+    private var targetTable = [String: [DaiFileManagerPath]]()
+    private let generateOperationQueue = NSOperationQueue()
+    private var logs = [String]()
 
 }
